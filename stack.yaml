@@ -1,0 +1,5 @@
+resolver: lts-7.8
+packages:
+- '.'
+extra-deps:
+- tree-view-0.5

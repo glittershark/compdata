@@ -1,5 +1,7 @@
-resolver: lts-7.8
+flags: {}
 packages:
 - '.'
 extra-deps:
+- derive-2.6.2
 - tree-view-0.5
+resolver: lts-8.6

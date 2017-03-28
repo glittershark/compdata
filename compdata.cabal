@@ -1,6 +1,6 @@
 Name:			compdata
-Version:		0.10.1
-Synopsis:            	Compositional Data Types
+Version:		0.11.0
+Synopsis:       Compositional Data Types
 Description:
 
   This library implements the ideas of /Data types a la carte/
@@ -187,17 +187,16 @@ library
                         Data.Comp.Multi.Derive.SmartConstructors
                         Data.Comp.Multi.Derive.SmartAConstructors
 
-  Build-Depends: base >= 4.7,
-                 base < 5,
+  Build-Depends: base,
                  template-haskell,
                  containers,
-                 mtl >= 2.2.1,
-                 QuickCheck >= 2 && < 2.9,
+                 mtl,
+                 QuickCheck,
                  derive,
                  deepseq,
                  th-expand-syns,
                  transformers,
-                 tree-view >= 0.5
+                 tree-view
   Extensions:           FlexibleContexts
   hs-source-dirs:	src
   ghc-options:          -W
@@ -207,16 +206,15 @@ Test-Suite test
   Type:                 exitcode-stdio-1.0
   Main-is:		Data_Test.hs
   hs-source-dirs:	testsuite/tests examples src
-  Build-Depends: base >= 4.7,
-                 base < 5,
+  Build-Depends: base,
                  template-haskell,
                  containers,
                  mtl >= 2.2.1,
-                 QuickCheck >= 2 && < 2.9,
+                 QuickCheck,
                  HUnit,
                  test-framework,
                  test-framework-hunit,
-                 test-framework-quickcheck2 >= 0.3,
+                 test-framework-quickcheck2,
                  derive,
                  th-expand-syns,
                  deepseq,
@@ -233,8 +231,8 @@ Benchmark algebra
                  base < 5,
                  template-haskell,
                  containers,
-                 mtl >= 2.2.1,
-                 QuickCheck >= 2 && < 2.9,
+                 mtl,
+                 QuickCheck,
                  derive,
                  deepseq,
                  criterion,

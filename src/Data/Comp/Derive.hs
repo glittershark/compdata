@@ -1,4 +1,6 @@
-{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TemplateHaskell    #-}
+{-# LANGUAGE QuasiQuotes        #-}
+{-# LANGUAGE StandaloneDeriving #-}
 --------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Comp.Derive
@@ -70,7 +72,7 @@ import qualified Data.DeriveTH as D
 {-| Derive an instance of 'Functor' for a type constructor of any first-order
   kind taking at least one argument. -}
 makeFunctor :: Name -> Q [Dec]
-makeFunctor = D.derive A.makeFunctor
+makeFunctor name = [d| deriving instance Functor $(conT name) |]
 
 {-| Derive an instance of 'NFData' for a type constructor. -}
 makeNFData :: Name -> Q [Dec]
